@@ -1,5 +1,5 @@
 # ייבוא פונקציית ההרצה מתוך קובץ הסוכן שלך (my_agent.py)
-from my_agent import run_weather_agent
+from server.my_agent import run_weather_agent
 
 def start_chat():
     print("==================================================")

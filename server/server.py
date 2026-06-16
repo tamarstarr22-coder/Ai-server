@@ -24,8 +24,12 @@ def read_root():
     return {"status": "success", "message": "Backend server is running smoothly!"}
 
 # 4. נקודת קצה לקבלת הודעות מהצ'אט של ה-React
-@app.post("/api/chat")
-def chat_endpoint(request: MessageRequest):
+# @app.post("/api/chat")
+# def chat_endpoint(request: MessageRequest):
+
+    print("=== קיבלתי בקשה ===")
+    print(request)
+
     user_text = request.message
     
     # כאן בהמשך נחבר את הלוגיקה מתוך chat.py כדי להחזיר תשובה מה-AI
@@ -33,3 +37,12 @@ def chat_endpoint(request: MessageRequest):
     ai_response = f"קיבלתי את ההודעה שלך: '{user_text}'. השרת מחובר בהצלחה!"
     
     return {"response": ai_response}
+
+
+
+@app.post("/api/chat")
+async def chat_endpoint(request: Request):
+    data = await request.json()
+    print(data)
+
+    return {"response": "בדיקה"}

@@ -1,6 +1,6 @@
 import os
 # ייבוא הרכיבים הרלוונטיים מתוך הקובץ הנוכחי שלך date_tool.py
-from date_tool import chat_with_tool, system
+from server.date_tool import chat_with_tool, system
 
 # רשימה גלובלית לשמירת ההיסטוריה, על מנת שהבוט יזכור את הקשר השיחה (למשל על איזו עיר מדובר)
 messages_history = []
